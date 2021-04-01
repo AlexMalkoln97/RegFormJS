@@ -123,7 +123,7 @@ function passwordValidCheck(password) {
 
 function isLegalAge(birthday) {
   const bday = birthday.value
-  const birthdayDate = new Date(bday.replace( /(\d{4})-(\d{2})-(\d{2})/, "$3/$1/$2/"));
+  const birthdayDate = new Date(bday.replace( /(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3/"));
   birthdayDate.setFullYear(birthdayDate.getFullYear() + 18);
   return new Date() > birthdayDate;
 }
